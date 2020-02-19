@@ -30,11 +30,11 @@ public class Funcionario extends Pessoa{
     }
     
     public double calcularSalario(){
-        return this.valorHora * 40;
+        return this.valorHora * 30;
     }
     
     public double calculaSalario(double desconto){
-        return (this.valorHora * 40)-desconto;
+        return (this.valorHora * 30)-desconto;
     }
     
     public double gerarBonus(){
