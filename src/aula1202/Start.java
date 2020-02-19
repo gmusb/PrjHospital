@@ -67,6 +67,22 @@ public class Start {
         System.out.println("Matrícula do Medico: "+m.getMatricula());
         System.out.println("CRM do Medico: "+m.getCRM());
         System.out.println("Especialidade do Medico: "+m.getEspecialidade());
+        System.out.println(" -------------------------------- ");
+        
+        Hospital h = new Hospital(10 , "Rua 2");
+        h.setNome("Flat-Line");
+        h.addFuncionario(f);
+        h.addFuncionario(m);
+        h.addFuncionario(e);
+        System.out.println("Funcionarios:");
+        h.listarTodosFuncionarios();
+        System.out.println("Medicos");
+        h.listarMedicos();
+        System.out.println("Enfermeiros");
+        h.listarEnfermeiros();
+        
+        ProntoSocorro ps = new ProntoSocorro(10, h);
+        ps.setEndereco("Rua 3");
     }
     
 }

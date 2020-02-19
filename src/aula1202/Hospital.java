@@ -42,6 +42,9 @@ public class Hospital {
         for(int i = 0; i < funcionarios.size(); i++){
             if(funcionarios.get(i) instanceof Medico){
                 System.out.println(funcionarios.get(i));
+                System.out.println("CPF do Medico: "+funcionarios.get(i).getCpf());
+                System.out.println("idade do Medico: "+funcionarios.get(i).getIdade());
+                System.out.println("nome do Medico: "+funcionarios.get(i).getNome());
             }
         }
     }
@@ -49,6 +52,9 @@ public class Hospital {
         for(int i = 0; i < funcionarios.size(); i++){
             if(funcionarios.get(i) instanceof Enfermeiro){
                 System.out.println(funcionarios.get(i));
+                System.out.println("CPF do enfermeiro: "+funcionarios.get(i).getCpf());
+                System.out.println("idade do enfermeiro: "+funcionarios.get(i).getIdade());
+                System.out.println("nome do enfermeiro: "+funcionarios.get(i).getNome());
             }
         }
     }
