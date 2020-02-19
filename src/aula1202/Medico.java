@@ -19,4 +19,9 @@ public class Medico extends Funcionario{
     public void setEspecialidade(String especialidade) {
         this.especialidade = especialidade;
     }
+    
+    @Override
+    public double gerarBonus(){
+        return calcularSalario()*0.3;
+    }
 }
