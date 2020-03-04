@@ -1,4 +1,4 @@
-package aula1202;
+package Model;
 
 public class Funcionario extends Pessoa{
     private int matricula;

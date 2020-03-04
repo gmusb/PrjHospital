@@ -1,4 +1,4 @@
-package aula1202;
+package Model;
 
 public class Medico extends Funcionario{
     private String CRM;

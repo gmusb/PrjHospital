@@ -1,8 +1,24 @@
 package aula1202;
 
+import Model.ConnectionFactory;
+import Model.Medico;
+import Model.Enfermeiro;
+import Model.Hospital;
+import Model.Funcionario;
+import Model.ProntoSocorro;
+import Model.Paciente;
+import java.sql.Connection;
+import javax.swing.JOptionPane;
 public class Start {
 
     public static void main(String[] args) {
+        try{
+            Connection con = new ConnectionFactory().getConnection();
+            JOptionPane.showMessageDialog(null, "Conectado ao banco!");
+        }catch(Exception e){
+            JOptionPane.showConfirmDialog(null, e);
+        }
+        
         Paciente p = new Paciente();
         p.setCodPaciente(1223);
         p.setCpf("133.333.077-40");

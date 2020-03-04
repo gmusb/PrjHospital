@@ -1,5 +1,5 @@
 
-package aula1202;
+package Model;
 
 abstract class Pessoa {
     private String nome;
