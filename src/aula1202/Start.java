@@ -7,17 +7,25 @@ import Model.Hospital;
 import Model.Funcionario;
 import Model.ProntoSocorro;
 import Model.Paciente;
+import View.CadHospital;
+import View.CadProntoSocorro;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
 public class Start {
 
     public static void main(String[] args) {
-        try{
+        /*try{
             Connection con = new ConnectionFactory().getConnection();
             JOptionPane.showMessageDialog(null, "Conectado ao banco!");
         }catch(Exception e){
             JOptionPane.showConfirmDialog(null, e);
-        }
+        }*/
+        
+        //CadHospital cadh = new CadHospital();
+        //cadh.setVisible(true);
+        
+        CadProntoSocorro cadPS = new CadProntoSocorro();
+        cadPS.setVisible(true);
         
         Paciente p = new Paciente();
         p.setCodPaciente(1223);
@@ -85,7 +93,7 @@ public class Start {
         System.out.println("Especialidade do Medico: "+m.getEspecialidade());
         System.out.println(" -------------------------------- ");
         
-        Hospital h = new Hospital(10 , "Rua 2");
+        Hospital h = new Hospital("Rua 2");
         h.setNome("Flat-Line");
         h.addFuncionario(f);
         h.addFuncionario(m);

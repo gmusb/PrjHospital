@@ -5,6 +5,8 @@
  */
 package View;
 
+import controller.ControllerHospital;
+
 /**
  *
  * @author Aluno01
@@ -16,6 +18,8 @@ public class CadProntoSocorro extends javax.swing.JFrame {
      */
     public CadProntoSocorro() {
         initComponents();
+        ControllerHospital ch = new ControllerHospital();
+        jComboBoxHospital.removeAllItems();
     }
 
     /**
@@ -41,6 +45,11 @@ public class CadProntoSocorro extends javax.swing.JFrame {
         jLabel2.setText("Hospital:");
 
         jComboBoxHospital.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxHospital.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxHospitalActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Endereco:");
 
@@ -95,6 +104,10 @@ public class CadProntoSocorro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBoxHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHospitalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxHospitalActionPerformed
 
     /**
      * @param args the command line arguments

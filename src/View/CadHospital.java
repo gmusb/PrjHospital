@@ -5,6 +5,9 @@
  */
 package View;
 
+import Model.Hospital;
+import controller.ControllerHospital;
+
 /**
  *
  * @author Aluno01
@@ -55,6 +58,11 @@ public class CadHospital extends javax.swing.JFrame {
         jLabel2.setText("Endereco:");
 
         BtnCadastrar.setText("Cadastrar");
+        BtnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,6 +121,13 @@ public class CadHospital extends javax.swing.JFrame {
     private void jTextFieldEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEnderecoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldEnderecoActionPerformed
+
+    private void BtnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCadastrarActionPerformed
+        Hospital h = new Hospital(jTextFieldNome.getText());
+        h.setEndereco(jTextFieldEndereco.getText());
+        ControllerHospital ch = new ControllerHospital();
+        ch.CadastrarHospital(h);
+    }//GEN-LAST:event_BtnCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
